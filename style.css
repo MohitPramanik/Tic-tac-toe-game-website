@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #ff9c9c;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 63px;
+    font-family: cursive;
+    text-decoration: underline;
+    color: red;
+    text-align: center;
+    background: #b7e9eb;
+    width: 100%;
+}
+
+#game-box{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background: #c4e6df;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    width: 114px;
+    height: 114px;
+    border: 2px solid blue;
+    font-size: 80px;
+    font-family: cursive;
+    text-align: center;
+    color: #bd0dea;
+    cursor: pointer;
+}
+
+@keyframes draw {
+    from {
+        height: 0;
+    }
+    to {
+        height: 1159;
+    }
+}
+
+#line{
+    height: 329px;
+    width: 8px;
+    background-color: #ff00ec;
+    position: absolute;
+    border-radius: 38px;
+    display: none;
+    animation: draw 0.5s;
+}
+
+@keyframes glow {
+    0%{
+        background-color: #ff9c9c;
+    }
+    50% {
+        background-color: #fcc9c9;
+    }
+    100%{
+        background-color: #ff9c9c;
+    }
+}
+
+#winner-name{
+    font-size: 55px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: green;
+    background: #ff9c9c;
+    position: relative;
+    top: 87px;
+    width: 100%;
+    animation: glow 1s;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+#btn {
+    width: 100%;
+    position: relative;
+    top: 104px;
+    text-align: center;
+    font-size: 10px;
+    display: none;
+}
+
+#btn button {
+    background: #0572fe;
+    font-size: 30px;
+    color: white;
+    font-family: cursive;
+    padding: 7px 39px;
+    border-radius: 152px;
+    border: none;
+    box-shadow: 0px 6px black;
+    cursor: pointer;
+    position: relative;
+}
+
+#btn button:active{
+    top: 10px;
+    box-shadow: none !important;
+    background: #0667e5;
+}
